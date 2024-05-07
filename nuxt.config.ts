@@ -11,6 +11,12 @@ export default defineNuxtConfig({
   typescript: {
     strict: true
   },
+  image: {
+    provider: 'twicpics',
+    twicpics: {
+      baseURL: 'https://vernaillen.twic.pics/linktree/'
+    }
+  },
   eslint: {
     config: {
       stylistic: {

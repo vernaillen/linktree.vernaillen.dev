@@ -25,7 +25,7 @@ useSeoMeta({
         :key="index"
         :icon="logo.icon"
         :to="logo.url"
-        :alt="logo.label"
+        :aria-label="logo.label"
         size="xs"
         variant="subtle"
         target="_blank"
@@ -71,6 +71,7 @@ useSeoMeta({
                 v-if="item.image"
                 :src="item.image"
                 :alt="item.imageAlt ? item.imageAlt : item.label"
+                format="webp"
                 class="h-5 mr-1"
               />
             </template>

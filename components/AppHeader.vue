@@ -6,7 +6,8 @@
           viewBox="0 0 754 276"
           width="100"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <g
             fill="none"
             opacity="transparent"

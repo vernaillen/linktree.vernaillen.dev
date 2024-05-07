@@ -4,10 +4,10 @@ export default defineAppConfig({
     gray: 'masala',
     variables: {
       light: {
-        background: '255 255 255',
+        background: '255 255 255'
       },
       dark: {
-        background: '12 12 13',
+        background: '12 12 13'
       }
     },
     header: {
@@ -19,7 +19,7 @@ export default defineAppConfig({
     button: {
       base: 'border-none',
       variant: {
-        subtle: 'text-{color}-500 dark:text-{color}-400 bg-{color}-50 hover:bg-{color}-100 disabled:bg-transparent dark:bg-{color}-950 dark:hover:bg-{color}-900 dark:disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-{color}-500 dark:focus-visible:ring-{color}-400',
+        subtle: 'text-{color}-500 dark:text-{color}-400 bg-{color}-50 hover:bg-{color}-100 disabled:bg-transparent dark:bg-{color}-950 dark:hover:bg-{color}-900 dark:disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-{color}-500 dark:focus-visible:ring-{color}-400'
       },
       color: {
         gray: {

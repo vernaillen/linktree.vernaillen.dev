@@ -24,7 +24,7 @@ export default <Partial<Config>>{
           700: '#755d0f',
           800: '#5e4509',
           900: '#452e06',
-          950: '#2e1b02',
+          950: '#2e1b02'
         },
         masala: {
           DEFAULT: '#3c3c3c',

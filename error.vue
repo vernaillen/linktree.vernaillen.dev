@@ -5,7 +5,7 @@ defineProps({
   error: {
     type: Object as PropType<NuxtError>,
     required: true
-  },
+  }
 })
 useHead({
   meta: [
