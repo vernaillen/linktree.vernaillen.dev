@@ -10,136 +10,89 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <ULandingHero
-      :title="page.hero.title"
-      :description="page.hero.description"
-      :links="page.hero.links"
-    >
-      <template #headline>
-        <UBadge
-          v-if="page.hero.headline"
-          variant="subtle"
-          size="lg"
-          class="relative rounded-full font-semibold"
-        >
-          <NuxtLink
-            :to="page.hero.headline.to"
-            target="_blank"
-            class="focus:outline-none"
-            tabindex="-1"
+  <ULandingSection
+    :description="page.linktree.description"
+  >
+    <template #title>
+      wouter <span class="text-primary-500 font-semibold">on the</span> net
+    </template>
+    <template #description>
+      <UButton
+        v-for="logo, index in page.linktree.logos"
+        :key="index"
+        :icon="logo.icon"
+        :to="logo.url"
+        :alt="logo.label"
+        size="xs"
+        variant="subtle"
+        target="_blank"
+        class="m-1"
+      />
+      <div
+        v-html="page.linktree.description"
+        class="mt-4 text-sm"
+      />
+    </template>
+    <UAccordion :items="page.linktree.links">
+      <template #default="{ item, open }">
+        <div class="bg-white rounded-lg mt-2" role="button">
+          <UButton
+            color="gray"
+            :block="true"
+            :label="item.label"
+            truncate
+            class="z-50 relative"
+            :ui="{ padding: { sm: 'py-3 pl-3 pr-7' } }"
           >
-            <span
-              class="absolute inset-0"
-              aria-hidden="true"
-            />
-          </NuxtLink>
-
-          {{ page.hero.headline.label }}
-
-          <UIcon
-            v-if="page.hero.headline.icon"
-            :name="page.hero.headline.icon"
-            class="ml-1 w-4 h-4 pointer-events-none"
-          />
-        </UBadge>
-      </template>
-
-      <ImagePlaceholder />
-
-      <ULandingLogos
-        :title="page.logos.title"
-        align="center"
-      >
-        <UIcon
-          v-for="icon in page.logos.icons"
-          :key="icon"
-          :name="icon"
-          class="w-12 h-12 lg:w-16 lg:h-16 flex-shrink-0 text-gray-900 dark:text-white"
-        />
-      </ULandingLogos>
-    </ULandingHero>
-
-    <ULandingSection
-      :title="page.features.title"
-      :description="page.features.description"
-      :headline="page.features.headline"
-    >
-      <UPageGrid
-        id="features"
-        class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
-      >
-        <ULandingCard
-          v-for="(item, index) in page.features.items"
-          :key="index"
-          v-bind="item"
-        />
-      </UPageGrid>
-    </ULandingSection>
-
-    <ULandingSection
-      :title="page.pricing.title"
-      :description="page.pricing.description"
-      :headline="page.pricing.headline"
-    >
-      <UPricingGrid
-        id="pricing"
-        compact
-        class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
-      >
-        <UPricingCard
-          v-for="(plan, index) in page.pricing.plans"
-          :key="index"
-          v-bind="plan"
-        />
-      </UPricingGrid>
-    </ULandingSection>
-
-    <ULandingSection
-      :headline="page.testimonials.headline"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-    >
-      <UPageColumns
-        id="testimonials"
-        class="xl:columns-4 scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
-      >
-        <div
-          v-for="(testimonial, index) in page.testimonials.items"
-          :key="index"
-          class="break-inside-avoid"
-        >
-          <ULandingTestimonial v-bind="testimonial" />
+            <template #leading>
+              <UIcon v-if="item.icon" :name="item.icon" class="mr-1 block dark:hidden" :class="item.iconClass" />
+              <UIcon v-if="item.icon" :name="item.iconDark ? item.iconDark : item.icon" class="mr-1 hidden dark:block" :class="item.iconClass" />
+              <NuxtImg
+                v-if="item.image"
+                :src="item.image"
+                :alt="item.imageAlt ? item.imageAlt : item.label"
+                class="h-5 mr-1"
+              />
+            </template>
+            <template #trailing>
+              <UIcon
+                name="i-heroicons-chevron-right-20-solid"
+                class="w-5 h-5 absolute right-3 transform transition-transform duration-200"
+                :class="[open && 'rotate-90']"
+              />
+            </template>
+          </UButton>
         </div>
-      </UPageColumns>
-    </ULandingSection>
-
-    <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10">
-      <ULandingCTA
-        v-bind="page.cta"
-        :card="false"
-      />
-    </ULandingSection>
-
-    <ULandingSection
-      id="faq"
-      :title="page.faq.title"
-      :description="page.faq.description"
-      class="scroll-mt-[var(--header-height)]"
-    >
-      <ULandingFAQ
-        multiple
-        :items="page.faq.items"
-        :ui="{
-          button: {
-            label: 'font-semibold',
-            trailingIcon: {
-              base: 'w-6 h-6'
-            }
-          }
-        }"
-        class="max-w-4xl mx-auto"
-      />
-    </ULandingSection>
-  </div>
+      </template>
+      <template #item="{ item }">
+        <div
+          class="overflow-hidden z-40
+          shadow-sm rounded-md
+          bg-white bg-opacity-70 dark:bg-gray-800
+          prose dark:prose-invert
+          text-center"
+        >
+          <div class="overflow-hidden px-2 pt-5 pb-3 text-sm text-dark dark:text-gray-200">
+            <component :is="item.svgComponent" v-if="item.svgComponent" />
+            <div v-html="item.subTitle" />
+            <div v-html="item.content" />
+            <UButton
+              :to="item.url"
+              :label="item.urlDisplay ? item.urlDisplay : item.url"
+              class="mt-2 linkButton"
+              trailing-icon="i-uil-external-link-alt"
+              target="_blank"
+            >
+              <template #trailing>
+                <UIcon
+                  name="i-uil-external-link-alt"
+                  size="1em"
+                />
+              </template>
+            </UButton>
+          </div>
+        </div>
+      </template>
+    </UAccordion>
+  </ULandingSection>
 </template>

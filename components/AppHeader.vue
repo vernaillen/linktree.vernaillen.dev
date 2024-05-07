@@ -1,73 +1,56 @@
 <script setup lang="ts">
-const nuxtApp = useNuxtApp()
-const { activeHeadings, updateHeadings } = useScrollspy()
-
-const links = computed(() => [{
-  label: 'Features',
-  to: '#features',
-  icon: 'i-heroicons-cube-transparent',
-  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
-}, {
-  label: 'Pricing',
-  to: '#pricing',
-  icon: 'i-heroicons-credit-card',
-  active: activeHeadings.value.includes('pricing') && !activeHeadings.value.includes('testimonials')
-}, {
-  label: 'Testimonials',
-  to: '#testimonials',
-  icon: 'i-heroicons-academic-cap',
-  active: activeHeadings.value.includes('testimonials')
-}, {
-  label: 'FAQ',
-  to: '#faq',
-  icon: 'i-heroicons-question-mark-circle',
-  active: activeHeadings.value.includes('faq')
-}])
-
-nuxtApp.hooks.hookOnce('page:finish', () => {
-  updateHeadings([
-    document.querySelector('#features'),
-    document.querySelector('#pricing'),
-    document.querySelector('#testimonials'),
-    document.querySelector('#faq')
-  ])
-})
 </script>
 
 <template>
-  <UHeader :links="links">
-    <template #logo>
-      Nuxt UI Pro <UBadge
-        label="Landing"
-        variant="subtle"
-        class="mb-0.5"
-      />
+  <UHeader title=" ">
+    <template #center>
+      <div class="flex items-start h-full">
+        <svg
+          viewBox="0 0 754 276"
+          width="100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g
+            fill="none"
+            opacity="transparent"
+          >
+            <path
+              class="fill-black dark:fill-primary-500"
+              d="M0 0 H92 V184 H172 V0 H264 V184 H344 V0 H436 V276 H0 Z"
+            />
+            <path
+              class="fill-primary-500 dark:fill-white"
+              d="M490 0 H582 V184 H662 V0 H754 V276 H490 Z"
+            />
+          </g>
+        </svg>
+      </div>
     </template>
 
     <template #right>
-      <UButton
-        label="Sign in"
-        color="white"
-        variant="ghost"
-        trailing-icon="i-heroicons-arrow-right-20-solid"
+      <UColorModeButton
+        size="xs"
+        color="primary"
+        variant="soft"
         class="hidden lg:flex"
       />
-    </template>
-
-    <template #panel>
-      <UAsideLinks :links="links" />
-
-      <UDivider class="my-6" />
-
       <UButton
-        label="Sign in"
-        color="white"
-        block
-        class="mb-3"
+        size="xs"
+        to="https://wa.me/32473344656"
+        icon="i-mdi-whatsapp"
+        variant="soft"
+        target="_blank"
+        aria-label="contact me on WhatsApp"
+        class="ml-1 sm:ml-2"
       />
       <UButton
-        label="Get started"
-        block
+        size="xs"
+        variant="soft"
+        icon="i-mdi-github"
+        to="https://github.com/vernaillen/vernaillen.dev/"
+        aria-label="Wouter Vernaillen's GitHub"
+        target="_blank"
+        class="ml-1 sm:ml-2"
       />
     </template>
   </UHeader>

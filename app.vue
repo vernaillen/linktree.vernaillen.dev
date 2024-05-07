@@ -4,7 +4,7 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
   ],
   htmlAttrs: {
     lang: 'en'
@@ -12,8 +12,8 @@ useHead({
 })
 
 useSeoMeta({
-  ogImage: 'https://landing-template.nuxt.dev/social-card.png',
-  twitterImage: 'https://landing-template.nuxt.dev/social-card.png',
+  ogImage: 'https://linktree.vernaillen.dev/social-card.png',
+  twitterImage: 'https://linktree.vernaillen.dev/social-card.png',
   twitterCard: 'summary_large_image'
 })
 </script>
