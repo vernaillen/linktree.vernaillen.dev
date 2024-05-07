@@ -86,13 +86,14 @@ useSeoMeta({
           </UButton>
         </div>
       </template>
-      <template #item="{ item }">
+      <template #item="{ item, index }">
         <div
           class="overflow-hidden z-40
           shadow-sm rounded-md
           bg-white bg-opacity-70 dark:bg-gray-800
           prose dark:prose-invert
-          text-center"
+          text-center slide-enter "
+          :style="'--enter-stage: ' + index"
         >
           <div class="overflow-hidden px-2 pt-5 pb-3 text-sm text-dark dark:text-gray-200">
             <component
