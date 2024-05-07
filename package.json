@@ -23,6 +23,7 @@
   "devDependencies": {
     "@nuxt/eslint": "^0.3.10",
     "eslint": "^9.2.0",
+    "nuxt-beastcss": "^1.0.3",
     "unlighthouse": "^0.12.1",
     "vite-plugin-eslint2": "^4.4.0",
     "vue-tsc": "^2.0.16"

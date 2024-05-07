@@ -2,7 +2,7 @@ import nuxtPkg from 'nuxt/package.json'
 
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
-  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxt/fonts', '@nuxt/image'],
+  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxt/fonts', '@nuxt/image', 'nuxt-beastcss'],
   ui: {
     icons: ['heroicons', 'simple-icons', 'mdi', 'logos', 'game-icons', 'arcticons', 'uil']
   },
