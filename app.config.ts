@@ -30,7 +30,7 @@ export default defineAppConfig({
     landing: {
       section: {
         wrapper: 'py-6 sm:py-8',
-        container: 'gap-6 sm:gap-y-10',
+        container: 'gap-6 sm:gap-y-6',
         title: 'lg:text-4xl'
       }
     },

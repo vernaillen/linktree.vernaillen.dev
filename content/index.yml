@@ -2,11 +2,6 @@ title: Wouter Vernaillen's LinkTree
 description: linktree.vernaillen.dev
 linktree:
   title: Wouter on the Net
-  description:
-    ecstatic dance dj & trancedans facilitator<br>
-    modulaire synth noedeler (eurorack)<br>
-    freelance fullstack java/js developer<br>
-    ...altijd aan t bijleren...
   logos:
     - label: LinkedIn
       icon: i-mdi-linkedin
@@ -39,12 +34,12 @@ linktree:
       urlDisplay: harmonics.be
       image: /images/harmonics.png
       imageAlt: Harmonics.be logo
-    - label: Are you Nuxt?
+    - label: Discovering Nuxt
       subTitle: Learning Nuxt 3
       content: Latest blog post on <a href="https://vernaillen.dev/blog/nuxt" target="_blank">vernaillen.dev</a> about learning Nuxt 3
       icon: i-logos-nuxt-icon
-      url: https://vernaillen.dev/blog/nuxt
-      urlDisplay: vernaillen.dev/blog/nuxt
+      url: https://vernaillen.dev/blog/discoveringnuxt
+      urlDisplay: vernaillen.dev/blog/discoveringnuxt
     - label: Release Your Inner Dancer
       content: Ecstatic Dance dj-set recorded on 3 September 2022 in Haaltert
       icon: i-game-icons-oak-leaf
@@ -58,3 +53,10 @@ linktree:
       icon: i-arcticons-super-sound
       url: https://vue-audiomotion-analyzer.dev
       urlDisplay: vue-audiomotion-analyzer.dev
+    - label: About Wouter
+      content: check the about page on my website
+      url: https://vernaillen.dev/about
+      urlDisplay: vernaillen.dev/about
+      image: /images/avatarwouter.jpg
+      imageAlt: Wouter Vernaillen
+      imageClass: rounded-full

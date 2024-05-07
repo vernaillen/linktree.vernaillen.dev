@@ -15,6 +15,7 @@ useSeoMeta({
   <ULandingSection
     v-if="page"
     :description="page.linktree.description"
+    class="slide-enter-content"
   >
     <template #title>
       wouter <span class="text-primary-500 font-semibold">on the</span> net
@@ -31,15 +32,12 @@ useSeoMeta({
         target="_blank"
         class="m-1"
       />
-      <div
-        class="mt-4 text-sm"
-        v-html="page.linktree.description"
-      />
     </template>
     <UAccordion :items="page.linktree.links">
-      <template #default="{ item, open }">
+      <template #default="{ item, open, index }">
         <div
-          class="bg-white rounded-lg mt-2"
+          class="bg-white rounded-lg mt-2 slide-enter "
+          :style="'--enter-stage: ' + index"
           role="button"
         >
           <UButton
@@ -75,6 +73,7 @@ useSeoMeta({
                 :height="20"
                 format="webp"
                 class="mr-1"
+                :class="item.imageClass"
               />
             </template>
             <template #trailing>

@@ -24,3 +24,24 @@ useSeoMeta({
   <AppFooter />
   <UNotifications />
 </template>
+
+<style>
+@keyframes slide-enter {
+  0% {
+    @apply opacity-5 blur-sm;
+  }
+  to {
+    @apply opacity-100;
+  }
+}
+@media (prefers-reduced-motion:no-preference) {
+  :not(.no-sliding) .slide-enter-content :not(.no-sliding) [slide-enter],
+  :not(.no-sliding) .slide-enter-content :not(.no-sliding) .slide-enter {
+    --enter-stage: 0;
+    --enter-step: 60ms;
+    --enter-initial: 0ms;
+    animation: slide-enter 0.2s both 0.2s;
+    animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
+  }
+}
+</style>
