@@ -6,22 +6,6 @@ const config = useRuntimeConfig()
   <UFooter>
     <template #center>
       <div class="prose dark:prose-invert items-center text-center mx-auto">
-        <div class="text-sm">
-          Copyright © {{ new Date().getFullYear() }}.
-          <NuxtLink
-            href="https://vernaillen.dev"
-            target="_blank"
-          >
-            Wouter Vernaillen
-          </NuxtLink>
-          /
-          <NuxtLink
-            href="https://harmonics.be"
-            target="_blank"
-          >
-            Harmonics BV
-          </NuxtLink>
-        </div>
         <div class="text-xs pt-3">
           <p class="text-sm">
             built with <UIcon
@@ -38,6 +22,22 @@ const config = useRuntimeConfig()
               /> Nuxt {{ config.public.nuxtVersion }}
             </NuxtLink>
           </p>
+        </div>
+        <div class="text-sm">
+          Copyright © {{ new Date().getFullYear() }}.
+          <NuxtLink
+            href="https://vernaillen.dev"
+            target="_blank"
+          >
+            Wouter Vernaillen
+          </NuxtLink>
+          /
+          <NuxtLink
+            href="https://harmonics.be"
+            target="_blank"
+          >
+            Harmonics BV
+          </NuxtLink>
         </div>
       </div>
     </template>
