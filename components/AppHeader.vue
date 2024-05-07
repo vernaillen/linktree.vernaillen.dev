@@ -1,7 +1,7 @@
 <template>
   <UHeader title=" ">
     <template #center>
-      <div class="flex items-start h-full">
+      <div class="absolute top-0 left-0 right-0 mx-auto w-[100px]">
         <svg
           viewBox="0 0 754 276"
           width="100"

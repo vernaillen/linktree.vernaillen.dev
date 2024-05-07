@@ -17,13 +17,13 @@ linktree:
     - label: SoundCloud
       url: https://soundcloud.com/woutervernaillen
       icon: i-mdi-soundcloud
-    - name: Instagram
+    - label: Instagram
       url: https://www.instagram.com/woutervernaillen/
       icon: i-mdi-instagram
-    - name: Twitter
+    - label: Twitter
       url: https://twitter.com/vernaillen
       icon: i-mdi-twitter
-    - name: Mastodon
+    - label: Mastodon
       url: https://elk.zone/fosstodon.org/@vernaillen
       icon: i-mdi-mastodon
   links:

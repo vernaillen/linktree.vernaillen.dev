@@ -20,12 +20,7 @@ useSeoMeta({
 
 <template>
   <AppHeader />
-
-  <UMain>
-    <NuxtPage />
-  </UMain>
-
+  <NuxtPage />
   <AppFooter />
-
   <UNotifications />
 </template>

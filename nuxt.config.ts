@@ -1,9 +1,15 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import nuxtPkg from 'nuxt/package.json'
+
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
   modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/ui', '@nuxt/fonts', '@nuxt/image'],
   ui: {
     icons: ['heroicons', 'simple-icons', 'mdi', 'logos', 'game-icons', 'arcticons', 'uil']
+  },
+  runtimeConfig: {
+    public: {
+      nuxtVersion: nuxtPkg.version
+    }
   },
   devtools: {
     enabled: true

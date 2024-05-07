@@ -48,7 +48,7 @@ useSeoMeta({
             :label="item.label"
             variant="soft"
             truncate
-            class="z-50 relative"
+            class="relative"
             :ui="{
               color: { gray: { solid: 'ring-0' } },
               padding: { sm: 'py-3 pl-3 pr-7' }
@@ -71,8 +71,10 @@ useSeoMeta({
                 v-if="item.image"
                 :src="item.image"
                 :alt="item.imageAlt ? item.imageAlt : item.label"
+                :width="21"
+                :height="20"
                 format="webp"
-                class="h-5 mr-1"
+                class="mr-1"
               />
             </template>
             <template #trailing>
