@@ -8,10 +8,7 @@
         <div
           aria-label="Homepage"
           class="cursor-pointer"
-          @click="reloadNuxtApp({
-            path: '/',
-            ttl: 1000
-          });"
+          @click="reloadNuxtApp({ path: '/', ttl: 1000 });"
         >
           <svg
             viewBox="0 0 754 276"

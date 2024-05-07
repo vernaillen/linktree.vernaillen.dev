@@ -4,7 +4,7 @@ export default defineAppConfig({
     gray: 'masala',
     variables: {
       light: {
-        background: '255 255 255'
+        background: '245 245 245'
       },
       dark: {
         background: '12 12 13'

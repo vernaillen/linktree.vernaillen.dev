@@ -17,7 +17,7 @@ const config = useRuntimeConfig()
               target="_blank"
             >
               <UIcon
-                class="-mb-[2px] mx-1 w-4 h-4"
+                class="-mb-[2px] mx-1 w-4 h-3"
                 name="i-logos-nuxt-icon"
               /> Nuxt {{ config.public.nuxtVersion }}
             </NuxtLink>
