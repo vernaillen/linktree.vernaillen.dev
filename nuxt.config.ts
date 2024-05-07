@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     enabled: true
   },
   typescript: {
-    strict: false
+    strict: true
   },
   eslint: {
     config: {
@@ -17,6 +17,10 @@ export default defineNuxtConfig({
         commaDangle: 'never',
         braceStyle: '1tbs'
       }
+    },
+    checker: {
+      lintOnStart: true,
+      fix: true
     }
   }
 })

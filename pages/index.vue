@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
-
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+}
 useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
@@ -11,6 +13,7 @@ useSeoMeta({
 
 <template>
   <ULandingSection
+    v-if="page"
     :description="page.linktree.description"
   >
     <template #title>
@@ -29,24 +32,41 @@ useSeoMeta({
         class="m-1"
       />
       <div
-        v-html="page.linktree.description"
         class="mt-4 text-sm"
+        v-html="page.linktree.description"
       />
     </template>
     <UAccordion :items="page.linktree.links">
       <template #default="{ item, open }">
-        <div class="bg-white rounded-lg mt-2" role="button">
+        <div
+          class="bg-white rounded-lg mt-2"
+          role="button"
+        >
           <UButton
             color="gray"
             :block="true"
             :label="item.label"
+            variant="soft"
             truncate
             class="z-50 relative"
-            :ui="{ padding: { sm: 'py-3 pl-3 pr-7' } }"
+            :ui="{
+              color: { gray: { solid: 'ring-0' } },
+              padding: { sm: 'py-3 pl-3 pr-7' }
+            }"
           >
             <template #leading>
-              <UIcon v-if="item.icon" :name="item.icon" class="mr-1 block dark:hidden" :class="item.iconClass" />
-              <UIcon v-if="item.icon" :name="item.iconDark ? item.iconDark : item.icon" class="mr-1 hidden dark:block" :class="item.iconClass" />
+              <UIcon
+                v-if="item.icon"
+                :name="item.icon"
+                class="mr-1 block dark:hidden"
+                :class="item.iconClass"
+              />
+              <UIcon
+                v-if="item.icon"
+                :name="item.iconDark ? item.iconDark : item.icon"
+                class="mr-1 hidden dark:block"
+                :class="item.iconClass"
+              />
               <NuxtImg
                 v-if="item.image"
                 :src="item.image"
@@ -73,13 +93,17 @@ useSeoMeta({
           text-center"
         >
           <div class="overflow-hidden px-2 pt-5 pb-3 text-sm text-dark dark:text-gray-200">
-            <component :is="item.svgComponent" v-if="item.svgComponent" />
+            <component
+              :is="item.svgComponent"
+              v-if="item.svgComponent"
+            />
             <div v-html="item.subTitle" />
             <div v-html="item.content" />
             <UButton
               :to="item.url"
               :label="item.urlDisplay ? item.urlDisplay : item.url"
-              class="mt-2 linkButton"
+              class="mt-2"
+              variant="subtle"
               trailing-icon="i-uil-external-link-alt"
               target="_blank"
             >

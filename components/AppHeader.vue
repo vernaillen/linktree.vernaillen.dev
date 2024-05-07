@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <UHeader title=" ">
     <template #center>
