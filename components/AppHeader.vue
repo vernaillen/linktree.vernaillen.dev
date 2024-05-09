@@ -1,6 +1,6 @@
 <template>
   <UHeader>
-    <template #logo>
+    <template #left>
       &nbsp;
     </template>
     <template #center>
