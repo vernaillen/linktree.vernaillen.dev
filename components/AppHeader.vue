@@ -35,12 +35,6 @@
     </template>
 
     <template #right>
-      <UColorModeButton
-        size="xs"
-        color="primary"
-        variant="soft"
-        class="hidden lg:flex"
-      />
       <UButton
         size="xs"
         to="https://wa.me/32473344656"

@@ -14,7 +14,7 @@ export default defineAppConfig({
       center: 'flex items-start'
     },
     container: {
-      constrained: 'max-w-2xl'
+      constrained: 'max-w-xl'
     },
     button: {
       base: 'border-none',

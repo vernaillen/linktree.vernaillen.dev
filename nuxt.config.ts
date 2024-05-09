@@ -8,10 +8,14 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxthq/studio'
+    '@nuxthq/studio',
+    'nuxt-time'
   ],
   ui: {
     icons: ['heroicons', 'simple-icons', 'mdi', 'logos', 'game-icons', 'arcticons', 'uil']
+  },
+  colorMode: {
+    preference: 'dark'
   },
   runtimeConfig: {
     public: {

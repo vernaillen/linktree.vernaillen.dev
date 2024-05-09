@@ -9,6 +9,9 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description
 })
+definePageMeta({
+  colorMode: 'dark'
+})
 </script>
 
 <template>
@@ -56,13 +59,7 @@ useSeoMeta({
               <UIcon
                 v-if="item.icon"
                 :name="item.icon"
-                class="mr-1 block dark:hidden"
-                :class="item.iconClass"
-              />
-              <UIcon
-                v-if="item.icon"
-                :name="item.iconDark ? item.iconDark : item.icon"
-                class="mr-1 hidden dark:block"
+                class="mr-1"
                 :class="item.iconClass"
               />
               <NuxtImg
