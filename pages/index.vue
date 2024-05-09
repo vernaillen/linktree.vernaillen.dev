@@ -36,7 +36,7 @@ useSeoMeta({
     <UAccordion :items="page.linktree.links">
       <template #default="{ item, open, index }">
         <div
-          class="bg-white rounded-lg mt-2 slide-enter "
+          class="bg-white rounded-lg mt-2 slide-enter z-10"
           :style="'--enter-stage: ' + index"
           role="button"
         >
