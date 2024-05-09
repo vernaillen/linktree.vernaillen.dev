@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.3.10",
+    "@nuxthq/studio": "^1.0.15",
     "eslint": "^9.2.0",
     "unlighthouse": "^0.12.1",
     "vite-plugin-eslint2": "^4.4.0",
