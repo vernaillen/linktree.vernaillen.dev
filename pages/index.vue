@@ -35,6 +35,10 @@ definePageMeta({
         target="_blank"
         class="m-1"
       />
+      <div class="text-sm mt-5">
+        ecstatic dance dj & trancedance facilitator / java & nuxt developer<br>
+        ... forever exploring & learning ...
+      </div>
     </template>
     <UAccordion :items="page.linktree.links">
       <template #default="{ item, open, index }">
