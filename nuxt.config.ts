@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxthq/studio',
+    '@nuxtjs/plausible',
     'nuxt-time'
   ],
   ui: {
@@ -33,6 +34,9 @@ export default defineNuxtConfig({
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/linktree/'
     }
+  },
+  plausible: {
+    apiHost: 'https://linktree.vernaillen.dev/plio'
   },
   eslint: {
     config: {
