@@ -33,7 +33,7 @@ if (import.meta.client) {
     && hostname !== '127.0.0.1'
     && !hostname.startsWith('10.0.2.')
     && !hostname.includes('netlify.app')
-  ) { window.location.href = 'linktree.vernaillen.dev' }
+  ) { window.location.href = 'https://linktree.vernaillen.dev' }
 }
 </script>
 
