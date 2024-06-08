@@ -36,7 +36,8 @@ definePageMeta({
         class="m-1"
       />
       <div class="text-sm mt-5">
-        ecstatic dance dj & trancedance facilitator / java & nuxt developer<br>
+        ecstatic dance dj & trancedance facilitator<br>
+        freelance full stack developer (java & nuxt)<br>
         ... forever exploring & learning ...
       </div>
     </template>
