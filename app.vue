@@ -20,20 +20,20 @@ useHead({
 })
 
 useSeoMeta({
-  ogImage: 'https://linktree.vernaillen.dev/social-card.png',
-  twitterImage: 'https://linktree.vernaillen.dev/social-card.png',
+  ogImage: 'https://links.vernaillen.dev/social-card.png',
+  twitterImage: 'https://links.vernaillen.dev/social-card.png',
   twitterCard: 'summary_large_image'
 })
 
 if (import.meta.client) {
   const hostname = window.location.hostname
   if (
-    hostname !== 'linktree.vernaillen.dev'
+    hostname !== 'links.vernaillen.dev'
     && hostname !== 'localhost'
     && hostname !== '127.0.0.1'
     && !hostname.startsWith('10.0.2.')
     && !hostname.includes('netlify.app')
-  ) { window.location.href = 'https://linktree.vernaillen.dev' }
+  ) { window.location.href = 'https://links.vernaillen.dev' }
 }
 </script>
 

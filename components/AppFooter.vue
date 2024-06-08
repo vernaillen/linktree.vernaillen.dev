@@ -3,7 +3,7 @@ import type { CommitResponse } from '~/types/github'
 
 const config = useRuntimeConfig()
 
-const apiUrl = computed(() => 'https://api.github.com/repos/vernaillen/linktree.vernaillen.dev/commits')
+const apiUrl = computed(() => 'https://api.github.com/repos/vernaillen/links.vernaillen.dev/commits')
 const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () =>
   $fetch(apiUrl.value)
 )

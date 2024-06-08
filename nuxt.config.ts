@@ -36,7 +36,7 @@ export default defineNuxtConfig({
     }
   },
   plausible: {
-    apiHost: 'https://linktree.vernaillen.dev/plio'
+    apiHost: 'https://links.vernaillen.dev/plio'
   },
   eslint: {
     config: {

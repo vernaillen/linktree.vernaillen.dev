@@ -21,8 +21,8 @@ useHead({
 useSeoMeta({
   title: 'Page not found',
   description: 'We are sorry but this page could not be found.',
-  ogImage: 'https://linktree.vernaillen.dev/social-card.png',
-  twitterImage: 'https://linktree.vernaillen.dev/social-card.png',
+  ogImage: 'https://links.vernaillen.dev/social-card.png',
+  twitterImage: 'https://links.vernaillen.dev/social-card.png',
   twitterCard: 'summary_large_image'
 })
 </script>

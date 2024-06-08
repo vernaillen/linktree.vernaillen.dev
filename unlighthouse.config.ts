@@ -1,7 +1,7 @@
 import { defineConfig } from 'unlighthouse'
 
 export default defineConfig({
-  site: 'linktree.vernaillen.dev',
+  site: 'links.vernaillen.dev',
   scanner: {
     samples: 3,
     device: 'mobile'
