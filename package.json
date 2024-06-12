@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.3.13",
-    "@nuxthq/studio": "^1.1.2",
+    "@nuxthq/studio": "^2.0.0",
     "@nuxtjs/plausible": "^1.0.0",
     "eslint": "^9.4.0",
     "nuxt-time": "^0.1.3",
