@@ -22,6 +22,12 @@ linktree:
       url: https://elk.zone/fosstodon.org/@vernaillen
       icon: i-mdi-mastodon
   links:
+    - label: WPNuxt
+      content: integrate WordPress as a headless CMS into your Nuxt application
+      url: https://wpnuxt.com
+      urlDisplay: wpnuxt.com
+      icon: i-logos-nuxt-icon
+      iconClass: w-4 h-3
     - label: Vernaillen.dev
       content: website for my freelance consultancy services as a full stack java developer
       url: https://vernaillen.dev
@@ -34,13 +40,6 @@ linktree:
       urlDisplay: harmonics.be
       image: /images/harmonics.png
       imageAlt: Harmonics.be logo
-    - label: Discovering Nuxt
-      subTitle: Learning Nuxt 3
-      content: Latest blog post on <a href="https://vernaillen.dev/blog/nuxt" target="_blank">vernaillen.dev</a> about learning Nuxt 3
-      icon: i-logos-nuxt-icon
-      iconClass: w-4 h-3
-      url: https://vernaillen.dev/blog/discoveringnuxt
-      urlDisplay: vernaillen.dev/blog/discoveringnuxt
     - label: Release Your Inner Dancer
       content: Ecstatic Dance dj-set recorded on 3 September 2022 in Haaltert
       icon: i-game-icons-oak-leaf
@@ -48,12 +47,6 @@ linktree:
       url: https://soundcloud.com/woutervernaillen/release-your-inner-dancer-ecstatic-dance
       urlDisplay: soundcloud.com/...release-your-inner-dancer...
       soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1337357878&color=%23ff5500&inverse=false&auto_play=false&show_user=true
-    - label: Vue AudioMotion Analyzer
-      subTitle: High-resolution real-time audio spectrum analyzer
-      content: Vue plugin wrapping Henrique Vianna's audioMotion-analyzer
-      icon: i-arcticons-super-sound
-      url: https://vue-audiomotion-analyzer.dev
-      urlDisplay: vue-audiomotion-analyzer.dev
     - label: About Wouter Vernaillen
       content: discover more about me on the about page of my website
       url: https://vernaillen.dev/about
