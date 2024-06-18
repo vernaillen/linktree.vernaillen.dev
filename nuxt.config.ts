@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   image: {
     provider: 'twicpics',
     twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/linktree/'
+      baseURL: 'https://vernaillen.twic.pics/links'
     }
   },
   plausible: {
