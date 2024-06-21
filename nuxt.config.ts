@@ -12,6 +12,9 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     'nuxt-time'
   ],
+  future: {
+    compatibilityVersion: 4
+  },
   ui: {
     icons: ['heroicons', 'simple-icons', 'mdi', 'logos', 'game-icons', 'arcticons', 'uil']
   },
